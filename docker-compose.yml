@@ -15,6 +15,5 @@ mysql:
     MYSQL_DATABASE: development  
   ports:
     - "3306:3306"
-
 redis:
   image: redis
