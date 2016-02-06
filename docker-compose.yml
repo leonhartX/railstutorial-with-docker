@@ -5,3 +5,16 @@ web:
     - .:/app
   ports:
     - "3000:3000"
+  links:
+    - mysql
+    - redis
+mysql:
+  image: mysql
+  environment: 
+    MYSQL_ROOT_PASSWORD: password  
+    MYSQL_DATABASE: development  
+  ports:
+    - "3306:3306"
+
+redis:
+  image: redis
