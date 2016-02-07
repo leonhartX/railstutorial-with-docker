@@ -10,6 +10,8 @@ web:
     - redis
 mysql:
   image: mysql
+  volumes:
+    - mysql_data:/var/lib/mysql
   environment: 
     MYSQL_ROOT_PASSWORD: password  
     MYSQL_DATABASE: app_development  
