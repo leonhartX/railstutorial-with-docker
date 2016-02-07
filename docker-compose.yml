@@ -12,7 +12,7 @@ mysql:
   image: mysql
   environment: 
     MYSQL_ROOT_PASSWORD: password  
-    MYSQL_DATABASE: development  
+    MYSQL_DATABASE: app_development  
   ports:
     - "3306:3306"
 redis:
