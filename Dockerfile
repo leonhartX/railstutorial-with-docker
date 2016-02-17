@@ -5,7 +5,7 @@ RUN apt-get update -qq && apt-get install -y nodejs --no-install-recommends && r
 RUN apt-get update -qq && apt-get install -y mysql-client sqlite3 --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 # throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
+#RUN bundle config --global frozen 1
 
 RUN mkdir -p /app
 WORKDIR /app
