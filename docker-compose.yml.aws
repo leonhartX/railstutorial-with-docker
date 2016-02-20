@@ -11,10 +11,8 @@ mysql:
   volumes:
     - mysql_data:/var/lib/mysql
   environment: 
-    MYSQL_USER: admin
-    MYSQL_PASSWORD: password
-    MYSQL_ROOT_PASSWORD: password  
-    MYSQL_DATABASE: app_development  
+    MYSQL_ROOT_PASSWORD: password
+    MYSQL_DATABASE: app_development
   ports:
     - "3306:3306"
   mem_limit: 256000000

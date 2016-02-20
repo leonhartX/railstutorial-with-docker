@@ -1,5 +1,5 @@
 web:
-  image: leonhart/railstutorial
+  image: leonhart/railstutorial-with-docker
   volumes:
     - .:/app
   ports:
@@ -12,8 +12,6 @@ mysql:
   volumes:
     - mysql_data:/var/lib/mysql
   environment: 
-    MYSQL_USER: admin
-    MYSQL_PASSWORD: password
     MYSQL_ROOT_PASSWORD: password
     MYSQL_DATABASE: app_development
   ports:
