@@ -5,16 +5,21 @@ web:
   links:
     - mysql
     - redis
+  mem_limit: 256000000
 mysql:
   image: mysql
   volumes:
     - mysql_data:/var/lib/mysql
   environment: 
+    MYSQL_USER: admin
+    MYSQL_PASSWORD: password
     MYSQL_ROOT_PASSWORD: password  
     MYSQL_DATABASE: app_development  
   ports:
     - "3306:3306"
+  mem_limit: 256000000
 redis:
   image: redis
   ports:
     - "6379:6379"
+  mem_limit: 128000000
