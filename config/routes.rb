@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  get 'static_pages/help'
-  get 'static_pages/about'
-  get 'static_pages/contact'
+  get 'help' => 'static_pages#help'
+  get 'about' => 'static_pages#about'
+  get 'contact' => 'static_pages#contact'
 
-  get 'welcome/index'
-
+  get 'signup' => 'users#new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Serve websocket cable requests in-process
