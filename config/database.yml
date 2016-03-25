@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
+  host: rails-with-docker.c7xivkdf5jha.ap-northeast-1.rds.amazonaws.com
   database: app_production
   username: app
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
