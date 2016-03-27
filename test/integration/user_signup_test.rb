@@ -32,6 +32,7 @@ class UserSignupTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_select "title", "#{name} | Ruby on Rails Tutorial Sample App"
     assert_not flash.empty?
+    assert is_logged_in?
   end
 
 end
