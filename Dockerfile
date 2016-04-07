@@ -8,6 +8,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 ADD . /app
+RUN bundle update rails
 RUN bundle install
 
 CMD rails server -p 3000 -b '0.0.0.0'
