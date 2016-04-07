@@ -68,7 +68,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   test "successful edit with friendly forwarding" do
     get edit_user_path(@user)
     log_in_as(@user)
-    assert_redirected_to edit_user_path(@user.id)
+    assert_redirected_to edit_user_path(@user)
     name = "Foo Bar"
     email = "foo@bar.com"
     patch user_path(@user), params: {
@@ -82,6 +82,14 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     @user.reload
     assert_equal @user.name, name
     assert_equal @user.email, email
+  end
+
+  test "only redirect_back_or when fisrt login" do
+    get edit_user_path(@user)
+    assert_not_nil session[:forwarding_url]
+    log_in_as(@user)
+    assert_redirected_to edit_user_path(@user)
+    assert_nil session[:forwarding_url]
   end
 
 end
