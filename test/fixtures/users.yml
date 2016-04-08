@@ -5,15 +5,27 @@ leonhart:
   email: terryleonhart@gmail.com
   password_digest: <%= User.digest('password') %>
   admin: true
+  activated: true
+  activated_at: <%= Time.now %>
 
 lc:
   name: lccc
   email: liuchangnju@gmail.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.now %>
+
+ghost:
+  name: ghost
+  email: ghost@gmail.com
+  password_digest: <%= User.digest('password') %>
+  activated: false
 
 <% 30.times do |n| %>
 user_<%= n %>:
   name:  <%= "User #{n}" %>
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.now %>
 <% end %>
