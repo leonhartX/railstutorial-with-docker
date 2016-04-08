@@ -15,6 +15,12 @@ lc:
   activated: true
   activated_at: <%= Time.now %>
 
+ghost:
+  name: ghost
+  email: ghost@gmail.com
+  password_digest: <%= User.digest('password') %>
+  activated: false
+
 <% 30.times do |n| %>
 user_<%= n %>:
   name:  <%= "User #{n}" %>
