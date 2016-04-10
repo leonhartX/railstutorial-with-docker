@@ -35,6 +35,9 @@ gem 'bootstrap-will_paginate', '~>0.0.10'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass', '3.3.6.0'
 gem 'rails-controller-testing'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
