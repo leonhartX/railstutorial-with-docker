@@ -15,6 +15,13 @@ lc:
   activated: true
   activated_at: <%= Time.now %>
 
+baby:
+  name: baby
+  email: baby@gmail.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.now %>
+
 none:
   name: none
   email: none@example.com

@@ -38,7 +38,7 @@ tone:
 van:
   content: "Dude, this van's, like, rolling probable cause."
   created_at: <%= 4.hours.ago.to_time %>
-  user: lc
+  user: baby
 
 <% 30.times do |n| %>
 micropost_<%= n %>:
